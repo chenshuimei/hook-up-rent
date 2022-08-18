@@ -2,10 +2,11 @@
  * @Description: 这是***页面
  * @Date: 2022-08-15 14:27:05
  * @Author: shuimei
- * @LastEditTime: 2022-08-17 17:27:08
+ * @LastEditTime: 2022-08-18 15:03:41
  */
 import 'package:flutter/material.dart';
 
+import 'function_buttion.dart';
 import 'header.dart';
 
 class TabsProfile extends StatelessWidget {
@@ -22,7 +23,10 @@ class TabsProfile extends StatelessWidget {
             icon: Icon(Icons.settings))
       ]),
       body: ListView(
-        children: [Header(), Text('这里是内瓤')],
+        children: [
+          Header(),
+          FunctionButton(),
+        ],
       ),
     );
   }

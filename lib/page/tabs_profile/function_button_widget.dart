@@ -2,7 +2,7 @@
  * @Description: 这是***页面
  * @Date: 2022-08-18 16:05:05
  * @Author: shuimei
- * @LastEditTime: 2022-08-18 16:17:52
+ * @LastEditTime: 2022-08-18 16:25:02
  */
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ class FunctionButtonWidget extends StatelessWidget {
         data.onTapHandle(context);
       },
       child: Container(
-        margin: EdgeInsets.only(top: 30.0),
+        margin: EdgeInsets.only(top: 20.0),
         width: MediaQuery.of(context).size.width * 0.33,
         child: Column(children: [
           Image.asset(

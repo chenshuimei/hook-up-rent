@@ -4,7 +4,7 @@
  * @Description: 这是路由页面
  * @Date: 2022-07-29 14:09:20
  * @Author: shuimei
- * @LastEditTime: 2022-08-02 15:23:18
+ * @LastEditTime: 2022-08-18 16:37:54
  */
 // import 'dart:ffi';
 
@@ -18,6 +18,7 @@ import 'package:fluro/fluro.dart';
 import 'package:hook_up_rent/page/not_found.dart';
 import 'package:hook_up_rent/page/register.dart';
 import 'package:hook_up_rent/page/room_detail/index.dart';
+import 'package:hook_up_rent/page/setting.dart';
 
 class Routes {
   //1.定义路由名称
@@ -25,6 +26,7 @@ class Routes {
   static String login = "/login";
   static String register = "/register";
   static String roomDetail = "/room/:roomId";
+  static String setting = "/setting";
 
   //2.定义路由处理函数
   static Handler _homeHandler = Handler(handlerFunc: (context, parameters) {
@@ -44,6 +46,9 @@ class Routes {
       Handler(handlerFunc: (context, Map<String, dynamic> parameters) {
     return RoomDetailPage(roomId: parameters['roomId'][0]);
   });
+  static Handler _settingHandler = Handler(handlerFunc: (context, parameters) {
+    return SettingPage();
+  });
 
   //3.编写函数 configureRoutes
   static void configureRoutes(FluroRouter router) {
@@ -51,6 +56,7 @@ class Routes {
     router.define(login, handler: _loginHandler);
     router.define(register, handler: _registerHandler);
     router.define(roomDetail, handler: _roomDetailHandler);
+    router.define(setting, handler: _settingHandler);
     router.notFoundHandler = _notFoundHandler;
   }
 }

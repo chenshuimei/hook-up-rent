@@ -2,7 +2,7 @@
  * @Description: 这是***页面
  * @Date: 2022-08-15 15:34:42
  * @Author: shuimei
- * @LastEditTime: 2022-08-15 23:58:30
+ * @LastEditTime: 2022-08-17 17:09:39
  */
 import 'dart:ui';
 
@@ -19,6 +19,7 @@ class Header extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(color: Colors.green),
       height: 95.0,
+      padding: EdgeInsets.only(top: 5.0, left: 20.0, bottom: 20.0),
       child: Row(
         children: [
           Container(
@@ -33,7 +34,7 @@ class Header extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(padding: EdgeInsets.all(5.0)),
+              Padding(padding: EdgeInsets.all(10.0)),
               Row(
                 children: [
                   // 登录

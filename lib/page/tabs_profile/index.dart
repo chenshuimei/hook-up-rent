@@ -2,7 +2,7 @@
  * @Description: 这是***页面
  * @Date: 2022-08-15 14:27:05
  * @Author: shuimei
- * @LastEditTime: 2022-08-15 16:57:14
+ * @LastEditTime: 2022-08-17 17:27:08
  */
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class TabsProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('我的'), actions: [
+      appBar: AppBar(elevation: 0, title: Text('我的'), actions: [
         IconButton(
             onPressed: () {
               Navigator.of(context).pushNamed('settings');
